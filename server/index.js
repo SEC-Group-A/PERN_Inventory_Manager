@@ -36,8 +36,8 @@ const upload = multer({
   }
 });
 
-////ROUTE-1////
-////SIGN-UP////////
+//ROUTE-1////
+//SIGN-UP////////
 
 app.post('/register', async (req, res) => {
   const { username, email , password } = req.body;
@@ -53,8 +53,8 @@ app.post('/register', async (req, res) => {
 });
 
 
-/////ROUTE-2/////
-/////LOGIN/////////////
+///ROUTE-2/////
+///LOGIN/////////////
 app.post('/login', async (req, resp) => {
     const { email, password } = req.body;
   
@@ -80,8 +80,8 @@ app.post('/login', async (req, resp) => {
     }
   });
 
-/////ROUTE-3///////
-/////ADD PRODUCTS//////
+///ROUTE-3///////
+///ADD PRODUCTS//////
 app.post('/add-products', upload.single('photo'), async (req, res) => {
   try {
     const {userid, name, price, quantity, company } = req.body;
@@ -102,8 +102,9 @@ app.post('/add-products', upload.single('photo'), async (req, res) => {
 });
 
 
-///ROUTE-4////   When we need to get some data from database we use GET // I have used here post as i wanted to recieve a request from front-end with userId in it.
-////Product List/////
+///ROUTE-4///
+// /   When we need to get some data from database we use GET // I have used here post as i wanted to recieve a request from front-end with userId in it.
+//Product List/////
 
 app.post('/products', async (req, res) => {
   try {
@@ -127,8 +128,8 @@ app.post('/products', async (req, res) => {
 });
 
   
-/////ROUTE-5/////
-////DELETE PRODUCTS/////
+///ROUTE-5/////
+//DELETE PRODUCTS/////
 app.delete('/products/:id', async (req, res) => {
     const productId = req.params.id;
 
@@ -144,7 +145,7 @@ app.delete('/products/:id', async (req, res) => {
     }
   });
 
-////ROUTE -6///
+//ROUTE -6///
 ///GET ONE product USING IT'S productId///
 app.get('/products/:id' , async(req , res)=>{
     try {
@@ -165,8 +166,8 @@ app.get('/products/:id' , async(req , res)=>{
 
 // })
 
-////ROUTE-8////
-////UPDATE////
+//ROUTE-8////
+//UPDATE////
 app.put('/products/:id', async (req, res) => {
     const productId = req.params.id;
     const productData = req.body;
@@ -184,8 +185,8 @@ app.put('/products/:id', async (req, res) => {
   });
   
 
-/////ROUTE-9///////////
-/////SEARCHING////////////
+///ROUTE-9///////////
+///SEARCHING////////////
 app.post('/search/:key', async (req, res) => {
   const { key } = req.params;
   const { userId } = req.body;
@@ -213,8 +214,8 @@ app.post('/search/:key', async (req, res) => {
   }
 });
 
-////ROUTE-10////////
-/////PROFILE/////PERSON'S DETAILS////
+//ROUTE-10////////
+///PROFILE/////PERSON'S DETAILS////
 app.post("/profile" , async(req , res)=>{
   const {userId} = req.body;
   const {rows} = await pool.query("SELECT username , email FROM users WHERE userid = $1" , [userId]);
@@ -222,8 +223,8 @@ app.post("/profile" , async(req , res)=>{
   res.send(result);
 })
 
-////ROUTE-11////
-////COUNT NUMBER OF PRODUCTS/////
+//ROUTE-11////
+//COUNT NUMBER OF PRODUCTS/////
 app.post("/count" , async(req,res)=>{
   const {userId} = req.body;
   const {rows} = await pool.query("SELECT SUM(quantity) AS totalcount , SUM( price * quantity ) AS totalprice FROM product WHERE userid=$1",[userId]);
@@ -233,7 +234,7 @@ app.post("/count" , async(req,res)=>{
 
 
 
-///////////////////////BUYER'S ROUTER//////////////////////
+///////////////////BUYER'S ROUTER//////////////////////
 
 ///Add buyer////
 

@@ -171,19 +171,19 @@ input{
 .signupback{
   position:relative;
   bottom:15px;
-  background-image:linear-gradient(rgba(0,34,76,0.9) , rgba(0,34,76,0.9)),url('D:\html\JavaScript Classwork\PERN\PERN_Inventory_Manager\client\src\Warehouse Inventory Management.jpg');
+  background-image:linear-gradient(rgba(0,34,76,0.9), rgba(0,34,76,0.9)),url('./Warehouse Inventory Management.jpg');
   background-size: cover;
 }
 .adddiv{
   position:relative;
   bottom:15px;
   height:750px;
-  background-image:linear-gradient(rgba(0,34,76,0.9) , rgba(0,34,76,0.9)),url('D:\html\JavaScript Classwork\PERN\PERN_Inventory_Manager\client\src\worker-picking-in-fulfillment-warehouse.webp');
+  background-image:linear-gradient(rgba(0,34,76,0.9) , rgba(0,34,76,0.9)),url('./worker-picking-in-fulfillment-warehouse.webp');
   background-size: cover;
 }
 
 .plist{
-  background-image:linear-gradient(rgba(0,34,76,0.9) , rgba(92, 98, 106, 0.9)),url('D:\html\JavaScript Classwork\PERN\PERN_Inventory_Manager\client\src\Warehouse-1140x600.jpg');
+  background-image:linear-gradient(rgba(0,34,76,0.9) , rgba(92, 98, 106, 0.9)),url('./Warehouse-1140x600.jpg');
   /* background-size: cover; */
   background-size: cover;
   height:1000px;
