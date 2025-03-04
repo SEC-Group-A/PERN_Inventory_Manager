@@ -1,4 +1,4 @@
-CREATE DATABASE inventory3;
+CREATE DATABASE pern_inventory;
 
 CREATE TABLE users(
     userid SERIAL PRIMARY KEY,
