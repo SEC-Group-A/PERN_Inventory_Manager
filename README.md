@@ -1,7 +1,8 @@
 # PERN_Inventory_Manager
 
 
-To start in Vscode;
+To run webapp;
+
 cd .\server\
 npm install
 
