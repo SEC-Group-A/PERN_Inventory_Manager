@@ -12,6 +12,10 @@ npm install
 
 npm start
 
+open new terminal
+cd .\server\
+node index.js
+
 
 WATCH ->
 
