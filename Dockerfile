@@ -7,6 +7,6 @@ RUN npm install
 WORKDIR /app/client
 RUN npm install
 WORKDIR /app
-RUN useradd -m appuser
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 USER appuser
 CMD ["concurrently", "--kill-others \"cd ./client && npm start\" \"cd ./server && node index.js\""]
